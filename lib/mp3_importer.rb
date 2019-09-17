@@ -10,8 +10,8 @@ class MP3Importer
     # @files = Dir.glob("#{@path}/*.mp3").collect{|file|
     #     file.gsub("#{@path}/", "")
     #   }
-    Dir.each(path) do |file|
-      @files << file if file.end_with(".mp3")
+    Dir.foreach(path) do |file|
+      @files << file if file.end_with?(".mp3")
     end
     @files
   end
