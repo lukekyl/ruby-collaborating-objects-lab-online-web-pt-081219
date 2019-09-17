@@ -11,7 +11,7 @@ class MP3Importer
     #     file.gsub("#{@path}/", "")
     #   }
     Dir.each(path){|file|
-      @files << file.ends_with(".mp3")
+      @files << file.end_with(".mp3")
     }
     @files
   end
